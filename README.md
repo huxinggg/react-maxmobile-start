@@ -1,46 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 快速启动
 
-## Available Scripts
+```
+yarn && yarn start
+```
+#### 构建开发环境对应.env.development配置文件
+```
+yarn build:dev
+```
 
-In the project directory, you can run:
+#### 构建测试环境对应.env.test配置文件
+```
+yarn build:test
+```
 
-### `yarn start`
+#### 构建生产环境对应.env.production配置文件
+```
+yarn build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### 关于px转换，请修改config-overrides.js文件中如下代码
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+require('postcss-px-to-viewport')({
+    unitToConvert: 'px',
+    viewportWidth: 320,
+    unitPrecision: 5,
+    propList: ['*'],
+    viewportUnit: 'vw',
+    fontViewportUnit: 'vw',
+    selectorBlackList: [],
+    minPixelValue: 1,
+    mediaQuery: false,
+    replace: true,
+    exclude: undefined,
+    include: undefined,
+    landscape: false,
+    landscapeUnit: 'vw',
+    landscapeWidth: 568
+})
 
-### `yarn test`
+参考：https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 关于配置项
+```
+参考：https://create-react-app.bootcss.com/docs/getting-started
+```

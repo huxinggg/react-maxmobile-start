@@ -1,0 +1,20 @@
+@import '../common.scss';
+
+
+.title{
+    @extend .nat;
+    font-size: $primaryFontSize;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    color: $primaryColor;
+}
+
+.sbox{
+    height: calc(100vh - 360px);
+    overflow: auto;
+    min-height: 100px;
+}

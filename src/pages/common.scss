@@ -1,0 +1,26 @@
+$primaryColor: #333333;
+$primaryFontSize: 28px;
+
+
+.nat{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.button{
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #4A90E2;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ }
